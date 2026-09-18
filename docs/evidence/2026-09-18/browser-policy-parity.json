@@ -1,0 +1,55 @@
+{
+  "scope": "Historical browser WASM comparison against the four fixed CPU reference tensors. Retained from 2026-09-17; not rerun for GitHub packaging. No trajectory or hardware equivalence claimed.",
+  "policySha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+  "tolerance": 1e-05,
+  "result": {
+    "policyShape": {
+      "nq": 28,
+      "nu": 14
+    },
+    "status": {
+      "ready": true,
+      "loco": "legs",
+      "mode": "walk",
+      "time": 37.36000000000066,
+      "position": [
+        -0.6005026115232419,
+        0.0014680652913694932,
+        0.11650201077780617
+      ],
+      "tiltRad": 0.007539615546109849,
+      "command": [
+        0,
+        0,
+        0
+      ],
+      "fallen": false,
+      "busy": false,
+      "paused": true,
+      "policy": "./policies/BEST_alpha_walking.onnx",
+      "inferenceCount": 1868
+    },
+    "comparisons": [
+      {
+        "name": "standing",
+        "maxAbs": 4.470348358154297e-08,
+        "pass": true
+      },
+      {
+        "name": "forward",
+        "maxAbs": 9.406358003616333e-08,
+        "pass": true
+      },
+      {
+        "name": "head_left",
+        "maxAbs": 1.043081283569336e-07,
+        "pass": true
+      },
+      {
+        "name": "moving_tilted",
+        "maxAbs": 1.1920928955078125e-07,
+        "pass": true
+      }
+    ]
+  }
+}

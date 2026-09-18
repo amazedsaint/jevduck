@@ -1,0 +1,449 @@
+{
+  "timestamp": "2026-09-18T17:55:25.849Z",
+  "scope": "Live Jev decisions from native scenarioSpawns and SwarmController.status, with standing legged readiness. No physics rollout is performed by this script.",
+  "sourceSha256": {
+    "src/lib/swarm-contract.ts": "408f4de79be020c9324e5377e5683e77a4ef40f558d2a093181ae18074670d0a",
+    "src/lib/swarm-jev.ts": "0e953bd48130dd4c37350de5cf5b21e38de941531af1186bccc2195f678ea7c1",
+    "vendor/microduck-simulator/app/src/game/swarm-controller.js": "8fccfae12cb463e9e2f1f2085155e0a4803398c3c07e91f9e00b6be7c37906c3"
+  },
+  "cases": [
+    {
+      "scenario": "flock",
+      "request": {
+        "state": {
+          "seq": 20,
+          "time": 2,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "native-start-0",
+            "scenario": "flock",
+            "leaderId": "duck1",
+            "commandId": null,
+            "intent": "hold",
+            "phase": "idle",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              -0.30000000000000004,
+              0
+            ],
+            "spreadM": 0.6363961030678927,
+            "minSeparationM": 0.9,
+            "progressM": 0,
+            "targetErrorM": null,
+            "reason": "Scenario prepared. Waiting for a bounded group instruction.",
+            "elapsedS": 0,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": []
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "advance",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 1,
+        "abstained": false,
+        "reason": "Advance formation selected. Minimum separation 0.90 m; remaining slot error unmeasured m.",
+        "latencyMs": 462,
+        "alternatives": [
+          {
+            "intent": "advance",
+            "probability": 1
+          },
+          {
+            "intent": "regroup",
+            "probability": 0
+          },
+          {
+            "intent": "disperse",
+            "probability": 0
+          },
+          {
+            "intent": "hold",
+            "probability": 0
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "flock",
+      "request": {
+        "state": {
+          "seq": 20,
+          "time": 2,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "native-start-1",
+            "scenario": "flock",
+            "leaderId": "duck1",
+            "commandId": null,
+            "intent": "hold",
+            "phase": "idle",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              -0.30000000000000004,
+              0
+            ],
+            "spreadM": 0.6363961030678927,
+            "minSeparationM": 0.9,
+            "progressM": 0,
+            "targetErrorM": null,
+            "reason": "Scenario prepared. Waiting for a bounded group instruction.",
+            "elapsedS": 0,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "hold",
+              "outcome": "complete",
+              "progressM": 0,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": null,
+              "minSeparationM": 0.9
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "advance",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 1,
+        "abstained": false,
+        "reason": "Advance formation selected. Minimum separation 0.90 m; remaining slot error unmeasured m.",
+        "latencyMs": 247,
+        "alternatives": [
+          {
+            "intent": "advance",
+            "probability": 1
+          },
+          {
+            "intent": "regroup",
+            "probability": 0
+          },
+          {
+            "intent": "disperse",
+            "probability": 0
+          },
+          {
+            "intent": "hold",
+            "probability": 0
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "flock",
+      "request": {
+        "state": {
+          "seq": 20,
+          "time": 2,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "native-start-2",
+            "scenario": "flock",
+            "leaderId": "duck1",
+            "commandId": null,
+            "intent": "hold",
+            "phase": "idle",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              -0.30000000000000004,
+              0
+            ],
+            "spreadM": 0.6363961030678927,
+            "minSeparationM": 0.9,
+            "progressM": 0,
+            "targetErrorM": null,
+            "reason": "Scenario prepared. Waiting for a bounded group instruction.",
+            "elapsedS": 0,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "hold",
+              "outcome": "complete",
+              "progressM": 0,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": null,
+              "minSeparationM": 0.9
+            },
+            {
+              "intent": "hold",
+              "outcome": "complete",
+              "progressM": 0,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": null,
+              "minSeparationM": 0.9
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "advance",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 1,
+        "abstained": false,
+        "reason": "Advance formation selected. Minimum separation 0.90 m; remaining slot error unmeasured m.",
+        "latencyMs": 312,
+        "alternatives": [
+          {
+            "intent": "advance",
+            "probability": 1
+          },
+          {
+            "intent": "regroup",
+            "probability": 0
+          },
+          {
+            "intent": "disperse",
+            "probability": 0
+          },
+          {
+            "intent": "hold",
+            "probability": 0
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "gather",
+      "request": {
+        "state": {
+          "seq": 20,
+          "time": 2,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "native-start-3",
+            "scenario": "gather",
+            "leaderId": "duck1",
+            "commandId": null,
+            "intent": "hold",
+            "phase": "idle",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              0,
+              0
+            ],
+            "spreadM": 0.9192388155425119,
+            "minSeparationM": 1.3,
+            "progressM": 0,
+            "targetErrorM": null,
+            "reason": "Scenario prepared. Waiting for a bounded group instruction.",
+            "elapsedS": 0,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": []
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "regroup",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 0.99,
+        "abstained": false,
+        "reason": "Regroup selected. Minimum separation 1.30 m; remaining slot error unmeasured m.",
+        "latencyMs": 302,
+        "alternatives": [
+          {
+            "intent": "regroup",
+            "probability": 0.99
+          },
+          {
+            "intent": "disperse",
+            "probability": 0.01
+          },
+          {
+            "intent": "hold",
+            "probability": 0
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "convoy",
+      "request": {
+        "state": {
+          "seq": 20,
+          "time": 2,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "native-start-4",
+            "scenario": "convoy",
+            "leaderId": "duck4",
+            "commandId": null,
+            "intent": "hold",
+            "phase": "idle",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              5.551115123125783e-17,
+              0
+            ],
+            "spreadM": 0.7379024325749306,
+            "minSeparationM": 0.6599999999999999,
+            "progressM": 0,
+            "targetErrorM": null,
+            "reason": "Scenario prepared. Waiting for a bounded group instruction.",
+            "elapsedS": 0,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": []
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "advance",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 1,
+        "abstained": false,
+        "reason": "Advance formation selected. Minimum separation 0.66 m; remaining slot error unmeasured m.",
+        "latencyMs": 330,
+        "alternatives": [
+          {
+            "intent": "advance",
+            "probability": 1
+          },
+          {
+            "intent": "regroup",
+            "probability": 0
+          },
+          {
+            "intent": "change_leader",
+            "probability": 0
+          },
+          {
+            "intent": "hold",
+            "probability": 0
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "split",
+      "request": {
+        "state": {
+          "seq": 20,
+          "time": 2,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "native-start-5",
+            "scenario": "split",
+            "leaderId": "duck1",
+            "commandId": null,
+            "intent": "hold",
+            "phase": "idle",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              0,
+              0
+            ],
+            "spreadM": 0.5656854249492381,
+            "minSeparationM": 0.8,
+            "progressM": 0,
+            "targetErrorM": null,
+            "reason": "Scenario prepared. Waiting for a bounded group instruction.",
+            "elapsedS": 0,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": []
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "split",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 1,
+        "abstained": false,
+        "reason": "Split formation selected. Minimum separation 0.80 m; remaining slot error unmeasured m.",
+        "latencyMs": 207,
+        "alternatives": [
+          {
+            "intent": "split",
+            "probability": 1
+          },
+          {
+            "intent": "regroup",
+            "probability": 0
+          },
+          {
+            "intent": "hold",
+            "probability": 0
+          }
+        ]
+      }
+    }
+  ]
+}

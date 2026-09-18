@@ -1,0 +1,781 @@
+{
+  "source": "https://huggingface.co/spaces/pollen-robotics/microduck-simulator",
+  "revision": "023172c8a7d629b5258d90364c13bafe013abbfa",
+  "assets": [
+    {
+      "path": "app/public/policies/ball_kick_left.onnx",
+      "sha256": "d6928284dccd3dd61e08bf2f760effa74309fbefd97b2b31afb2a60f526d196a",
+      "size": 793685
+    },
+    {
+      "path": "app/public/policies/ball_kick_right.onnx",
+      "sha256": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af",
+      "size": 793685
+    },
+    {
+      "path": "app/public/policies/BEST_roller.onnx",
+      "sha256": "cf05651d2708a2f9364212e86b866c97a70ace8131c492500105e8f28bf99afd",
+      "size": 793685
+    },
+    {
+      "path": "app/public/policies/BEST_alpha_sitstand.onnx",
+      "sha256": "c6c40e35e726eabd803d633e090d112994f469921152448367953fbaf9799bc8",
+      "size": 793695
+    },
+    {
+      "path": "app/public/policies/BEST_roller_crouch.onnx",
+      "sha256": "a1a084be240469c76ac9d3fa44d4792f16d4b1da60398b3ecd3cfc5e2244d990",
+      "size": 793685
+    },
+    {
+      "path": "app/public/policies/BEST_alpha_stand.onnx",
+      "sha256": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+      "size": 793705
+    },
+    {
+      "path": "app/public/policies/roulade.onnx",
+      "sha256": "3d60da08fc13f29c1b57f41977aa898132c0d60042100149d8e775affcbca32b",
+      "size": 793685
+    },
+    {
+      "path": "app/public/policies/BEST_alpha_walking.onnx",
+      "sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+      "size": 793705
+    },
+    {
+      "path": "app/public/policies/alpha_ground_pick.onnx",
+      "sha256": "ffbf5109982ff999b0ba53afe86b9ae731bbec679d67fb7f8ab4c52152c88872",
+      "size": 793685
+    },
+    {
+      "path": "app/public/assets/duck-head-mark-open.webp",
+      "sha256": "e4c51525c4c79a82c9c7a32be1632e7488ed8d6119068375095ba6f8e8d06c94",
+      "size": 40026
+    },
+    {
+      "path": "app/public/assets/duck-head-mark.webp",
+      "sha256": "ad08b60991fa0568409a68001d53868341d55179c757007831ad8000cc1f96bd",
+      "size": 32622
+    },
+    {
+      "path": "app/public/assets/stickers/star-yellow.webp",
+      "sha256": "93ee62a3e5e697c4dc7af15a00a24919c81c940f56c53cc730caf9eae110cf77",
+      "size": 10466
+    },
+    {
+      "path": "app/public/assets/stickers/wave.webp",
+      "sha256": "eb115e0f06dcc7d6e86b63052bb52e5d2568186138cff09d801106cc5ab6d607",
+      "size": 41602
+    },
+    {
+      "path": "app/public/assets/stickers/quack-quack.webp",
+      "sha256": "3608b49bda042808ca69c75bddfed14226867bab741f18b186059ecd3e5e0b08",
+      "size": 32972
+    },
+    {
+      "path": "app/public/assets/stickers/quack.webp",
+      "sha256": "289e830372b197078e2d3f9e0ab1d8ae7d941895e73e1037d6b5e7871f1fe64f",
+      "size": 39484
+    },
+    {
+      "path": "app/public/assets/stickers/burst-yellow.webp",
+      "sha256": "b08865ed6ad01b10d54e0fb7ef0783c9d709fbe532cf99621ce789f12d213bfd",
+      "size": 20162
+    },
+    {
+      "path": "app/public/assets/stickers/ziouuu.webp",
+      "sha256": "737f020f74e1cbe3b0b0d9e58de38cf5c5ea0be8b5ee872313aad7cb0673b441",
+      "size": 35972
+    },
+    {
+      "path": "app/public/assets/stickers/shooting-star.webp",
+      "sha256": "f31230606d12fc64af7c4d6a39efb339e36ae81eb79caa297ec4e0ebc7c073c5",
+      "size": 26220
+    },
+    {
+      "path": "app/public/assets/stickers/boom.webp",
+      "sha256": "81083452beb521d1e304540534d20525c19f46102c4ef63e951f685cab61bfcc",
+      "size": 44314
+    },
+    {
+      "path": "app/public/assets/stickers/bang-red.webp",
+      "sha256": "9ad4baa5430230a2d5e982c54dac279a86f479ffca3763932b943075a3d9a122",
+      "size": 44386
+    },
+    {
+      "path": "app/public/assets/props/segaconsole.glb",
+      "sha256": "a9856ef7b628b2b20347fbfb87c8ccba3188a0f83c43945e45edd049bcff6fe3",
+      "size": 213776
+    },
+    {
+      "path": "app/public/assets/props/lavalamp.glb",
+      "sha256": "edd9d7f31ec2128d84c8c34d42ed9e3149c1a43d5af9d8b9eb0aadfb56f53459",
+      "size": 93984
+    },
+    {
+      "path": "app/public/assets/props/walkman.glb",
+      "sha256": "b9c1a34e840d8722ba6e39beaff4614e1e463fda4eb55e918779f4dc69987f54",
+      "size": 152704
+    },
+    {
+      "path": "app/public/assets/props/skateboard.glb",
+      "sha256": "23f4e8164a243ff6ce33022ad8109d129b3cb7d703afab51d05e2ff0a560e760",
+      "size": 256724
+    },
+    {
+      "path": "app/public/assets/props/dartboard.glb",
+      "sha256": "191cacd006611b00e82fae8ed20f6fd6c6c004c2b36d217951ad277207f2aeeb",
+      "size": 241448
+    },
+    {
+      "path": "app/public/assets/props/boombox.glb",
+      "sha256": "7089c3838d8e257b206c0fbc890ae434ca1796686fba3d46a3819c6496295177",
+      "size": 258308
+    },
+    {
+      "path": "app/public/assets/props/arcade.glb",
+      "sha256": "1343e6a6851f8f09f91d746c2e0ff030fbf2abeacc3d06b41906fe3200a7704e",
+      "size": 498180
+    },
+    {
+      "path": "app/public/assets/props/sneakers.glb",
+      "sha256": "1dd5160f94716bcbc8c0c35eefd80aa3395f10ae2f8abb22fdb1938e60377786",
+      "size": 259280
+    },
+    {
+      "path": "app/public/assets/props/crt-tv.glb",
+      "sha256": "92f024ca18c6d52052136ac22a516fb50adc8a4621b6dd833810afca23518a78",
+      "size": 170156
+    },
+    {
+      "path": "app/public/assets/sfx/step_a.wav",
+      "sha256": "a6afd9783e72a73276e975d5baba29845835fa326002c31546651f0f6dfb6ebd",
+      "size": 4622
+    },
+    {
+      "path": "app/public/assets/sfx/step_c.wav",
+      "sha256": "a3bdc8a240a9d20b1215e7d24787e0c478373fcf02c4971c919151dbb7113ef4",
+      "size": 4924
+    },
+    {
+      "path": "app/public/assets/sfx/step_b.wav",
+      "sha256": "2ea5271e219a8c2bc91ec9e253b71714b22e44a7f3e3fd1f5c33cea3435118a7",
+      "size": 4698
+    },
+    {
+      "path": "app/public/assets/sfx/click_b.wav",
+      "sha256": "4edce0301e1be6d384a20384d6059fa589af454cd1f31b94bef0c2bf7c349bef",
+      "size": 1038
+    },
+    {
+      "path": "app/public/assets/sfx/step_e.wav",
+      "sha256": "2b06c21370d2ffffad065cb0b1a6c54343ec130b9073d291769d24f6ca60e3bb",
+      "size": 4994
+    },
+    {
+      "path": "app/public/assets/sfx/click_a.wav",
+      "sha256": "f32c69bad5518fc3c04fac976b3d50579acfe0699512c8ceee91140338add875",
+      "size": 590
+    },
+    {
+      "path": "app/public/assets/sfx/step_d.wav",
+      "sha256": "bad640d37d62a21589aa363dcfc763546bd548da260ec371841dcfb2f47ee2a5",
+      "size": 4824
+    },
+    {
+      "path": "app/public/assets/sfx/thump_a.wav",
+      "sha256": "8fc501c13cb17d31b5db880c12326848a09afbdf194b771afbdcefd922a5607f",
+      "size": 19066
+    },
+    {
+      "path": "app/public/assets/sfx/thump_c.wav",
+      "sha256": "46205843156b8d4923ed392f213ccc2a326b67881b3f67dc4c082958a52fdf4f",
+      "size": 23954
+    },
+    {
+      "path": "app/public/assets/sfx/thump_b.wav",
+      "sha256": "27597d19b0ffc351f0a56b83c8ea7a76aae3c97e6aeb4a9fdb57ebe0400cfe81",
+      "size": 17794
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_b.wav",
+      "sha256": "660fa601e43eb7f05e67903446ccb11b9205bec31fdf4695a824c885e1da621e",
+      "size": 5510
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_c.wav",
+      "sha256": "2451a1286f28eaa5f54875c54486e03dd234c425c70c62ecc35c37f1bc745fc8",
+      "size": 8658
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_a.wav",
+      "sha256": "450d807c1e6f535f30a1e50491df9b57567b8b8be357148de731de8b7582c8c2",
+      "size": 5336
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_d.wav",
+      "sha256": "070253cd8fd2323226677935a6a7f6bb664e556a2292493e9269c8bc50cda188",
+      "size": 11002
+    },
+    {
+      "path": "app/public/assets/voices/duck1/wheee_start_b.wav",
+      "sha256": "875dbd94dc37da1bbfecd112805b636167e6919d96ebb1df3e6cbe514c637e39",
+      "size": 34966
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_e.wav",
+      "sha256": "9f0225bf39edae00420250f26610b923ca369eacaae97d775ca6e0d68d0789f2",
+      "size": 7214
+    },
+    {
+      "path": "app/public/assets/voices/duck1/wheee_loop_b.wav",
+      "sha256": "c242e7730b4d8ee14b76435ae4c3df97e765dce932b6b8c5efb8ab6ae129943e",
+      "size": 79170
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_g.wav",
+      "sha256": "c33fe26fc9491564c12a2ab4d49da7d5502d02e097067e1ca7b5e48078a5f2c8",
+      "size": 11068
+    },
+    {
+      "path": "app/public/assets/voices/duck1/wheee_start_a.wav",
+      "sha256": "0d1d30e7966083df05e63478bed2e2edb5a399ac15ce255d5071c297fcddf412",
+      "size": 39870
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_f.wav",
+      "sha256": "41bb6b9105669e0d297ab4e396491ff4798d0092c9f67911858cc970bb6e2fee",
+      "size": 6460
+    },
+    {
+      "path": "app/public/assets/voices/duck1/wheee_loop_a.wav",
+      "sha256": "ca5316b7ca36637bb7d855798f98afbd4c74ec59d82ac1997a5d630bd617b54c",
+      "size": 69248
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_k.wav",
+      "sha256": "bd64c51c26fe8f311e41ef9e949ca5a47718b529ce973d32d9490b2a350c89db",
+      "size": 9542
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_j.wav",
+      "sha256": "3a7a18a47c5a18d9fd21a78ea25dcb657feb7460680171357c5f123fc05ec454",
+      "size": 7278
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_h.wav",
+      "sha256": "47a7a3b9d6e06b601daaa47c3426c5dab963c9a05bd9878ca39155fbe7a55f8b",
+      "size": 10512
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_i.wav",
+      "sha256": "0114c825dec129ae02fbd2aacf0595497d919108865e25e57b6610dd2f41e270",
+      "size": 6578
+    },
+    {
+      "path": "app/public/assets/voices/duck1/wheee_end_a.wav",
+      "sha256": "0617f06a8eddd65d7ce2a21c93e5487b812be4e2f6defd0c37fd9724523efd76",
+      "size": 23916
+    },
+    {
+      "path": "app/public/assets/voices/duck1/chirp_l.wav",
+      "sha256": "cecbff6accd2f0d525d302db9c6582d695e31e907bcee14bb82ede4db1d204e0",
+      "size": 8632
+    },
+    {
+      "path": "app/public/assets/voices/duck1/wheee_end_b.wav",
+      "sha256": "654cde4a30bb25f4dd80f357edb3fdc067c632f0aa4b779e6689e88a78c216d0",
+      "size": 21502
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_b.wav",
+      "sha256": "63c6dba54db0a001e7ed9376cdccb9bd47a9e255fa7fd909e2505dc9fd332193",
+      "size": 9116
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_c.wav",
+      "sha256": "22804c3f59ff7eccef58aacbfd855fe9808f35cbe21ff4cd72264c2e30fd156a",
+      "size": 13554
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_a.wav",
+      "sha256": "356abe1da47758ab6df17954975123c53be79a9bcc919b5adf06d7ac8a602fb2",
+      "size": 7350
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_d.wav",
+      "sha256": "8158e8e9d118037bd03bed4d564dd9e70b07ade5acf8cb56b7d52cbe77dc53cd",
+      "size": 11580
+    },
+    {
+      "path": "app/public/assets/voices/duck4/wheee_start_b.wav",
+      "sha256": "9240c331d936d247d132a9a334145551dde01cd34d37aed67ba7ab7e94bd2aa5",
+      "size": 46872
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_e.wav",
+      "sha256": "836664d06509dbe43daddef6bd3415372774158145d950139b0e30f4057be41a",
+      "size": 8552
+    },
+    {
+      "path": "app/public/assets/voices/duck4/wheee_loop_b.wav",
+      "sha256": "7bf9e869f057f1458a9c54adf9f7ed2cc0e736860687ae3fb3b60a998de3d0d1",
+      "size": 111594
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_g.wav",
+      "sha256": "3ba26ccde31aafa4d43df34058da9a7b53aacdeaa847b2a9f12660b31a022a1e",
+      "size": 12176
+    },
+    {
+      "path": "app/public/assets/voices/duck4/wheee_start_a.wav",
+      "sha256": "968670339047d1787dc5b1e1feb2050d60dfc076d9df10bf3b0c979f866dbe2f",
+      "size": 58604
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_f.wav",
+      "sha256": "2839e0865a5e42aff830b2d1ccf113fba60c28e403c42886ba1b1e5bd470ce52",
+      "size": 7752
+    },
+    {
+      "path": "app/public/assets/voices/duck4/wheee_loop_a.wav",
+      "sha256": "d311e25fd5d5edbd5bb511b78afba9568f1d6d25e5e6bf4db4551c7163d82d60",
+      "size": 104542
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_k.wav",
+      "sha256": "80ccda91a3632145bfa6a750f8f1230ab59e94e541b82fb81c74810a56802c24",
+      "size": 17340
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_j.wav",
+      "sha256": "e768b952f37f22c2852e06ae1c88ef84d662721b7b518204b79292fbd794b543",
+      "size": 6472
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_h.wav",
+      "sha256": "28231a6ec54e9fabf53c6add53987b8b946ded9b384e7d0af5a9bca5fe0c0f57",
+      "size": 13742
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_i.wav",
+      "sha256": "d028418fb90dcf2b91efb8bc034ac6a934a302e50243271cc9cd272f956d3810",
+      "size": 6604
+    },
+    {
+      "path": "app/public/assets/voices/duck4/wheee_end_a.wav",
+      "sha256": "430f8b816b3ee0136f16b8089db353ad680b3856e9fc50ca043d32f13e6135fd",
+      "size": 30588
+    },
+    {
+      "path": "app/public/assets/voices/duck4/chirp_l.wav",
+      "sha256": "5a683cdb89ec94c655e900275a5afbd0a618e7523888d6bc681de4bbffe30f3d",
+      "size": 11280
+    },
+    {
+      "path": "app/public/assets/voices/duck4/wheee_end_b.wav",
+      "sha256": "50a75726a70c66f9b162452f600e29bd329e74952345e9d388dcac5114ebeb9c",
+      "size": 41004
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_b.wav",
+      "sha256": "b701381ae6aaa98a46114ad96847fcd4b087a4b3f1f02b5f1f2bbda7219dd183",
+      "size": 8448
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_c.wav",
+      "sha256": "f4e678fe44d371931ce323495a2e9bf9957fda5a382526acc58c1a82cc3e9eef",
+      "size": 13430
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_a.wav",
+      "sha256": "4ed6496a3208db4057f1547e2cc5c18a078d4200abdd1b564d7a502640448854",
+      "size": 5896
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_d.wav",
+      "sha256": "6f52cab48cb6eb9566e40da17023d8365064848746be2b444786431e8d8bd092",
+      "size": 12864
+    },
+    {
+      "path": "app/public/assets/voices/duck3/wheee_start_b.wav",
+      "sha256": "fe757d0491a06242c148cb518658700ff27a93868bf31c93b6a96a6240e3da7e",
+      "size": 41362
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_e.wav",
+      "sha256": "95f839d2c444acfa5bf823d9b8c65e84774f82650f4d8e3b5c7aa80cd4f242a0",
+      "size": 5496
+    },
+    {
+      "path": "app/public/assets/voices/duck3/wheee_loop_b.wav",
+      "sha256": "44436e417339efb1e99296e95ea40df24c15867fd1f6f75c94b40a018cafcc95",
+      "size": 80292
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_g.wav",
+      "sha256": "f78916cbdc2065d914f20c509ef0157500d14d386c1d8e2be00c018a99a8e942",
+      "size": 17304
+    },
+    {
+      "path": "app/public/assets/voices/duck3/wheee_start_a.wav",
+      "sha256": "499945accdcdc1ba5a2a307093026029f361b94dfbb5fa43a33d2da09dfa1d14",
+      "size": 45614
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_f.wav",
+      "sha256": "f6e581b10f2b4e81f13ffa186f9761285e581dda161614008a922ed59f46079a",
+      "size": 6528
+    },
+    {
+      "path": "app/public/assets/voices/duck3/wheee_loop_a.wav",
+      "sha256": "aeb0c5f9410b4886dc6310cb3de55fac783fce382b5a52556a9ecfff1fdcd4e8",
+      "size": 98112
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_k.wav",
+      "sha256": "5d68b91b7b6ae44a24b693183587dd27f1c8d8e9c6fd94e0f5c7c0931d9f98f0",
+      "size": 17800
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_j.wav",
+      "sha256": "97931d92be70e1448d6bed56515b8ffb1a439a6e44ae6c35b8c5e3ae7b400c00",
+      "size": 5182
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_h.wav",
+      "sha256": "c9a4c5a0b36cc2e684b7e00e95f9e6ec02f6dc2799337a2cddb1e791f84278e2",
+      "size": 12524
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_i.wav",
+      "sha256": "4dc2ef2ce703297da12fbe5f9722236df4a5faa907142cfc00e56970c75bc445",
+      "size": 8418
+    },
+    {
+      "path": "app/public/assets/voices/duck3/wheee_end_a.wav",
+      "sha256": "3b11c497576b4cc4e7e2e4988ba77b243e7370e4a59a201de88fee5010f3ff30",
+      "size": 35260
+    },
+    {
+      "path": "app/public/assets/voices/duck3/chirp_l.wav",
+      "sha256": "0f874aacabad93a0f706695874260dc421b3624e716ba4bfbc3e83e5ba840af6",
+      "size": 13884
+    },
+    {
+      "path": "app/public/assets/voices/duck3/wheee_end_b.wav",
+      "sha256": "642f786a9c0f982190de8d9fa375c4bb02525cd637436249ea53fbff6f169bc1",
+      "size": 29742
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_b.wav",
+      "sha256": "2fa61541951c240fa9e94cfb3582bf61f6a57254b1233e6c7342b852474bd33e",
+      "size": 7032
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_c.wav",
+      "sha256": "4ae92893fe916f96629c26ded93e71855fd0cee490c1690027ce0a19b3a29284",
+      "size": 16544
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_a.wav",
+      "sha256": "9f7aa1decf578eab8c05b1fc2ed5205439d19541bf270d26762440d0a8ca0aa9",
+      "size": 8702
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_d.wav",
+      "sha256": "971282d4fa0ab372713bc42bc510d03d6f033e8760e7592658cfec8c4ceace71",
+      "size": 10252
+    },
+    {
+      "path": "app/public/assets/voices/duck2/wheee_start_b.wav",
+      "sha256": "b90a40207ee49e4bfbac25e72b6fb49b83acc01a9bcbbb6289a98e1f3e8c8b85",
+      "size": 50640
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_e.wav",
+      "sha256": "a1d662e8b23203d5622984e698e9ed67a749133416fee6ddc59a3552675259b9",
+      "size": 8972
+    },
+    {
+      "path": "app/public/assets/voices/duck2/wheee_loop_b.wav",
+      "sha256": "90e92a91316b91a3b76e59647bc657fa5a40c3c92e9ab533388ddd2ad9455c1d",
+      "size": 85670
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_g.wav",
+      "sha256": "d79c3369e113a4323ec8afe3a4ca22b7a47e3867266af233974ff423d8fc134a",
+      "size": 13824
+    },
+    {
+      "path": "app/public/assets/voices/duck2/wheee_start_a.wav",
+      "sha256": "c223b4be6572a0aeb5a5c27309bb91b0dc5d9fd238eeafde40526cf19bce4326",
+      "size": 48186
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_f.wav",
+      "sha256": "d340696b480ae7cc2cc5b85de00741e86bd29ce766ad8eaa5f305726a079ae35",
+      "size": 8576
+    },
+    {
+      "path": "app/public/assets/voices/duck2/wheee_loop_a.wav",
+      "sha256": "6905ceca635fa23d164af335d09ef35043c5c50c3202e1737ea730a7289be118",
+      "size": 101852
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_k.wav",
+      "sha256": "00d2a8938313ea05addc67743d36dd21ba466601817c7ad891bd0ea15dfc1ec2",
+      "size": 11676
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_j.wav",
+      "sha256": "e7c217684a7fb0f27acb3a06052c784f3a66f775122bb368c2be4c27a50ac3f2",
+      "size": 9098
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_h.wav",
+      "sha256": "b04e48823c5b41f61c60633644bb3ffbf20611de9dcdc9bcdaff3c02ed5b2b5b",
+      "size": 13046
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_i.wav",
+      "sha256": "d34507b77bbab2a1ca9a467c19089e4605c6836194bc4a56b2dbd1890ad0f487",
+      "size": 5716
+    },
+    {
+      "path": "app/public/assets/voices/duck2/wheee_end_a.wav",
+      "sha256": "f8cde236043a3a0656aa6d6db61d2ff0dc6f653a04429aa298d2c8829513d427",
+      "size": 33064
+    },
+    {
+      "path": "app/public/assets/voices/duck2/chirp_l.wav",
+      "sha256": "a1fc77cdb7c00e5ed7ebe618452c11c517b7f3f647dfaa70566896ec2bfae084",
+      "size": 13124
+    },
+    {
+      "path": "app/public/assets/voices/duck2/wheee_end_b.wav",
+      "sha256": "5e9e767d1133bc6070ca8a212c633c19cee258e65df056c85b77f162308a1baf",
+      "size": 39824
+    },
+    {
+      "path": "app/public/robot/mjlab/microduck.glb",
+      "sha256": "ad0b8d1c886a857fd09d337be11e731f4ac72bf099b0af63081031f97ed6eadb",
+      "size": 1279444
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/neck_pitch.stl",
+      "sha256": "dbd6fcbf8b8f27a8364d5bcae2b9a537d7e384325b44a653b360139b6fa1da2f",
+      "size": 85284
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/ankle_right.stl",
+      "sha256": "48b8551a13d22cc8752ddf3148796b357a6cbd6e2ecbd93c3ecdfbf55e533e72",
+      "size": 51584
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/sole_left.stl",
+      "sha256": "357f80bb46855e3ce50f817705acd80471dae90b4ee6b4a0a948614a7daeddb1",
+      "size": 197384
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/jaw.stl",
+      "sha256": "90afa64e47ef237f0f58d6f4830dc3cd6215328ed8a639b1e1a9eb2157307f4a",
+      "size": 120834
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/right_shell.stl",
+      "sha256": "c346581c2e3c2c189ea49372a147dfbc0dca89db4ec02f9f230921e480e762a7",
+      "size": 256384
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/sole_right.stl",
+      "sha256": "07801107a36dbc1c2b83b3b64ad98be39ba662a8a7fa0b62a29119b201f41fe6",
+      "size": 198684
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/seeed_bearing__configuration_default.stl",
+      "sha256": "e4338e0e6c7adeb52a35e02d6fa5babe761e8752ffa0fc2e31b0ba672c18630d",
+      "size": 260084
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/rim.stl",
+      "sha256": "a6d58f80ec60041e721cba1de7af5c834700166a5c10e7f68d1a2b79c7b78cb0",
+      "size": 28884
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/lens.stl",
+      "sha256": "b9b86fce70198040781a739e2c15d2996b549b25d73b7544005ae08a415b486e",
+      "size": 23484
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/noenoeil.stl",
+      "sha256": "55f3167627f6fbd1a19966f92396adf2ccd55795b13ded3b9f52705ba8a7ab77",
+      "size": 12384
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/upper_leg_right.stl",
+      "sha256": "97fd516a4c0e593fef9e22b1521d60ca86bd91966a4328db0834bac5ba1cabdf",
+      "size": 124434
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/foot_right.stl",
+      "sha256": "e2aba02ec1b949bc8a5a77ad3d0af9009dee80c100aa4bbfcf336f1fa5ef206f",
+      "size": 246084
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/ankle_r_v1.stl",
+      "sha256": "c200102fb6f067cbec73f048fe2020b127e61d47fcffd7dbd84c90439767fd3f",
+      "size": 69484
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/seeed_bearing__configuration__22x16x4.stl",
+      "sha256": "8551dc99cbdc012bd261c2a175f2cc766dd6aed0786781b35f8381cd3aa95b34",
+      "size": 260134
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/elec_rpi_robot_hat_pcb.stl",
+      "sha256": "acc66b75f2ff26f42339577c38c6f348ec73c4fbb52912637ba5244eb1a78ebb",
+      "size": 225434
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/foot_left.stl",
+      "sha256": "b7749b1f4fd9e7faf8180772d7ce8254139c60bc43aee463ec76afc86212d59c",
+      "size": 241934
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/top_head_shell.stl",
+      "sha256": "a59823b8f2ab23d530e6b071559f7fd308851ae035b7cb4d0b7baf7edef4b3e3",
+      "size": 194984
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/yaw2roll.stl",
+      "sha256": "c20cbdd8a9d52f789ec5a4b0d4a173a225652c6bc4610d555ea309c7a0e0d559",
+      "size": 119884
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/m12_lens_holder.stl",
+      "sha256": "d96825a096d5d3d5d252086cf0cdb3f5bc22d9f0baef0a3f97a85bae1617be99",
+      "size": 98334
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/upper_leg_left.stl",
+      "sha256": "a626dafcdd0074fd4e79e604d377495d304d222f1afd27b13487b7248b35a0b8",
+      "size": 133134
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/soft_mouth_top.stl",
+      "sha256": "451f53d30350552cb6e26f777698272f7c3fa557f389adb24f94c75a201e67cd",
+      "size": 98384
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/bottom_head_shell.stl",
+      "sha256": "331a361406e77c05256e5064197f785ac1e9c8f091079a3519c2e33f28ae5ebc",
+      "size": 231334
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/tire.stl",
+      "sha256": "14c08d73185a4b521897aca74fb8b2a6d306a20d80e8822aa56cf1b4ace29bec",
+      "size": 88284
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/left_shell.stl",
+      "sha256": "c31e71e2e55c5daccfef738c80053104ba2fb3589a0836ab1b6ebb5c380a05ae",
+      "size": 256334
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/ankle_l_v1.stl",
+      "sha256": "74f9a51e15ac8fef93fc2efa35b61dc53cf832d798f75c3229700bd9b3aed4c4",
+      "size": 79484
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/face_part.stl",
+      "sha256": "47ad1137a68bf72b2c93f1bf4836f18fb9a8d21a4f8f86fbe761b9871233fcce",
+      "size": 136784
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/hip_l.stl",
+      "sha256": "dbdf6e7f5587385c0f6a77b407931b30e81c9a212dac7c52b4e0884156049056",
+      "size": 229134
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/motor_support.stl",
+      "sha256": "d6725004f0a85a5cf0161214ea0d39fb6f14ee3563c9a96cd5aad725b5e2a716",
+      "size": 45284
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/leg.stl",
+      "sha256": "bfbc6ae5faefc56bd65d860cf3410a08e8286717063584f15b56bbd5302b20f8",
+      "size": 166434
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/np_f970.stl",
+      "sha256": "01fbacc788b53ebb7648cda07090133b8c696da31d700c560f45189494977871",
+      "size": 247734
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/upper_leg_rigidity_plate.stl",
+      "sha256": "96e50158d44ef97fc46f5d6330b6bb02fb93116790ae892a170fdd052e696aba",
+      "size": 45084
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/ankle_left.stl",
+      "sha256": "df5d7f04d63390a1e263e0138ee94e1aec2ff2b55cf63729f4ec461b25c1c1f0",
+      "size": 58284
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/pcb__raspberry_pi_zero_2_w.stl",
+      "sha256": "43d8368ced3d623eaa5ef538e8361f5878b85931b7cd469a4488eee7aa00bd91",
+      "size": 262184
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/jaw_soft.stl",
+      "sha256": "6c3ebb578ea5e6d7b995baca9b42ef7c9f9858b56dedf6f0d949f5e6ea9d3ef2",
+      "size": 84084
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/trunk_base.stl",
+      "sha256": "4b84ebe28041e6236ecafd4a26cebe537e21c14423e6acded3d78478c7650ed7",
+      "size": 38734
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/yaw_roll_motion.stl",
+      "sha256": "ae3740fde29a261b79650a25825baedd84d538fc67b6b20b79589125e5e05592",
+      "size": 62184
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/neck.stl",
+      "sha256": "3cb654ee9387d55c7d10d40fc84bb7cbf3cedb3243d1da499cf01c54d366079c",
+      "size": 18384
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/bearing_roll.stl",
+      "sha256": "fa0da0a5eef428a41da6e9639f75120781594e600c5db7518621750221669849",
+      "size": 30284
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/power_support.stl",
+      "sha256": "4aee9ddf8c12478d334f3d8d9e65af712072bef241283a08c895606fc2e3d9e8",
+      "size": 128234
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/speaker.stl",
+      "sha256": "0ef54df86c6093c166d73e33dc0b8364ef5643a7a1b1dacaba577be5a9c06c32",
+      "size": 684
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/banana_pcb_locker.stl",
+      "sha256": "2e51f6e23e4dbea660a9dbadcd763bbc77d48a7e3e0a58f047eab45554e07b55",
+      "size": 11634
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/roller_blade.stl",
+      "sha256": "a8b0e6dbdb593eceaba1a0cc2a70ad8aac56f4c3b22676dbfb97409c1a094615",
+      "size": 262184
+    },
+    {
+      "path": "app/public/robot/mjlab/meshes/xl330.stl",
+      "sha256": "d3c7b71750397083d3dfbad395fd8ac794763f43e2ea2b5006da5840c976fc82",
+      "size": 45584
+    }
+  ]
+}

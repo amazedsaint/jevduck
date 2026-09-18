@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-09-18T18:07:06.022338+00:00",
+  "origin": "http://127.0.0.1:3177",
+  "simulatorAsset": "App-DOGPvdyk.js",
+  "status": "local and production checks complete",
+  "checks": [
+    {
+      "name": "desktop panels",
+      "outcome": "pass",
+      "evidence": "Inspector and command dock collapse independently; telemetry expands. Canvas persists and group authority stays active."
+    },
+    {
+      "name": "responsive panels",
+      "outcome": "pass",
+      "evidence": "390x844 scenario drawer exposes all four Run buttons; collapsed layout preserves viewport and Stop control. Viewport reset after check."
+    },
+    {
+      "name": "panel preferences",
+      "outcome": "pass",
+      "evidence": "Collapse choices survive reload."
+    },
+    {
+      "name": "fourth robot ball task",
+      "outcome": "pass",
+      "evidence": "Selected Plum; real Jev parsed place ball then kick. Browser completed2/2 in4.8simulated seconds, selected-foot contact and0.53m ball displacement."
+    },
+    {
+      "name": "flock startup and motion",
+      "outcome": "pass",
+      "evidence": "After native-start prompt fix,3movement windows by24.9s. Latest window centroid displacement0.21m, maxsloterror0.07m, spread0.63m, minseparation0.87m; Jev advance95%."
+    },
+    {
+      "name": "four-robot performance",
+      "outcome": "observed",
+      "evidence": "49-50Hz measured native control;123-137FPS rendering on this Mac browser. Not a cross-device benchmark."
+    },
+    {
+      "name": "orbit/panel authority",
+      "outcome": "pass",
+      "evidence": "Orbit drag on empty scene and inspector toggles preserved active flock controller;6movement windows by54.6s."
+    },
+    {
+      "name": "flock finite boundary",
+      "outcome": "admission and recovery probes fixed; physical boundary recovery not rerun",
+      "evidence": "At54.6s repeated forward advance had0.30m residual and0.02m currentprogress; later blocked at9movementwindows with0.28m residual. Jev abstained at23%. No unguarded motion."
+    },
+    {
+      "name": "aggregation",
+      "outcome": "pass with bounded residual",
+      "evidence": "Live regroup99%, disperse99%, regroup82%;4movementwindows by39s. Latest residual0.15m, RMSspread1.03m, minseparation1.40m. Then lowconfidence hold."
+    },
+    {
+      "name": "split and regroup",
+      "outcome": "superseded by final alternating-loop pass",
+      "evidence": "Initialsplit converged0.07m. Jevregroup98% then residual0.10m, spread0.50m, minsep0.66m. Later repeatedregroup84%, residual0.08m."
+    },
+    {
+      "name": "pause and resume",
+      "outcome": "pass",
+      "evidence": "Paused split session at32.6s; group inactive. Resume showed Directcontrol and Controllerremainsstopped."
+    },
+    {
+      "name": "leader convoy",
+      "outcome": "pass for bounded translation",
+      "evidence": "Four live Jev-selected advance windows by33.4s under leader04. Last completed window moved centroid0.12m with0.07m residual; minimumspacing0.59m. Nextwindow stopped manually at43.1s. Leadership recovery verified separately."
+    },
+    {
+      "name": "cancel during setup",
+      "outcome": "pass",
+      "evidence": "Stop all clicked during first four-robot setup at0.4s. Through13.6s remained Direct control, Controller stopped, zero movement windows and no Jev decision. Final source."
+    },
+    {
+      "name": "setup controls",
+      "outcome": "pass",
+      "evidence": "Restart layout disabled during starting at0.1s; Stop swarm remained enabled. Final source."
+    },
+    {
+      "name": "alternating split after final fix",
+      "outcome": "pass",
+      "evidence": "Four physical movement windows plus next split by39.6s. History at30.4s showed split0.50->0.07m, regroup0.45->0.10m, split0.58->0.07m. Next regroup chosen99%, then split after0.08m residual."
+    },
+    {
+      "name": "selection interruption",
+      "outcome": "pass",
+      "evidence": "Selected Plum during next split at42.4s. Group stopped and Direct control became active; all four robots remained standing."
+    },
+    {
+      "name": "nearest-peer measurement",
+      "outcome": "pass",
+      "evidence": "World selected Plum; nearest peer duck2 with0.81m center distance, matching displayed world positions to rounding."
+    },
+    {
+      "name": "Jev recovery probes",
+      "outcome": "pass within documented scope",
+      "evidence": "See recovery-probes.json. Seven measured-class API probes distinguish browser aggregates from a physical recovery rollout. Threshold unchanged; convoy52% abstained."
+    }
+  ],
+  "finalSimulatorAsset": "App-B0D6vR5y.js",
+  "production": {
+    "checkedAt": "2026-09-18T18:09:43.966259+00:00",
+    "origin": "https://jevduck.vercel.app",
+    "deploymentId": "dpl_68EAEooPnRco91KDwoJE9LvS9zVf",
+    "scenario": "gather",
+    "movementWindows": 4,
+    "stoppedAtSimulationSeconds": 40.5,
+    "evidence": "Jev regroup/disperse alternation physically ran. Latest disperse99%, next regroup89%. Inspector collapse and telemetry expansion preserved control. Measured50Hz control and122FPS render at36.0s. Stop all ended group ownership. All four rigs remained visible.",
+    "console": [
+      {
+        "message": "MutationObserver.observe received non-Node during page load",
+        "count": 2,
+        "firstTimestamp": "2026-09-18T18:07:18.593Z",
+        "attribution": "Unresolved. No app-owned nullable-node observer in shipped code. Vite modulepreload fallback observes document; Next queueMicrotask fallback observes a Text node. Browser tooling is plausible, not established. No functional failure or repeated runtime error was observed."
+      }
+    ],
+    "cleanup": "Controller stopped; temporary local tab closed; production tab retained."
+  }
+}

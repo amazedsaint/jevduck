@@ -1,0 +1,315 @@
+{
+  "date": "2026-09-18",
+  "controllerSha256": "8fccfae12cb463e9e2f1f2085155e0a4803398c3c07e91f9e00b6be7c37906c3",
+  "scope": "Four original MuJoCo robot trees and independent ONNX actor state; explicit preparation followed by native physics only.",
+  "tests": {
+    "pure": 6,
+    "native": 9,
+    "strictAllWindowConvergence": "failed: gather/disperse 0.241223 m and flock/regroup 0.137026 m exceed unchanged 0.13 m gate"
+  },
+  "results": [
+    {
+      "scenario": "flock",
+      "windows": [
+        {
+          "intent": "advance",
+          "elapsedS": 2.4000000000000017,
+          "targetErrorM": 0.07197230853219233,
+          "initialTargetErrorM": 0.28,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.21277595861841622,
+            0.21277596093722098,
+            0.21277595305932784,
+            0.21277596035336258
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.8999999749186353,
+      "wasmHeapBytes": 131203072
+    },
+    {
+      "scenario": "gather",
+      "windows": [
+        {
+          "intent": "regroup",
+          "elapsedS": 3.2400000000000024,
+          "targetErrorM": 0.07149124880476485,
+          "initialTargetErrorM": 0.3677636261253072,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.30248922044224436,
+            0.3024891043928026,
+            0.30248880749663376,
+            0.3024887081710904
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.8641204966762472,
+      "wasmHeapBytes": 189005824
+    },
+    {
+      "scenario": "convoy",
+      "windows": [
+        {
+          "intent": "advance",
+          "elapsedS": 1.4800000000000009,
+          "targetErrorM": 0.07281400832932718,
+          "initialTargetErrorM": 0.18,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.107769069179224,
+            0.10776906917843458,
+            0.10776906917801873,
+            0.10776906917953105
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.6599999993101078,
+      "wasmHeapBytes": 189005824
+    },
+    {
+      "scenario": "split",
+      "windows": [
+        {
+          "intent": "split",
+          "elapsedS": 4.359999999999995,
+          "targetErrorM": 0.07305612799998203,
+          "initialTargetErrorM": 0.4989307089003049,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.431265913330699,
+            0.427666514584494,
+            0.4285776007267028,
+            0.4313277383302016
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.7683477567312252,
+      "wasmHeapBytes": 189005824
+    },
+    {
+      "scenario": "flock",
+      "windows": [
+        {
+          "intent": "advance",
+          "elapsedS": 2.4000000000000017,
+          "targetErrorM": 0.07197230853219233,
+          "initialTargetErrorM": 0.28,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.21277595861841622,
+            0.21277596093722098,
+            0.21277595305932784,
+            0.21277596035336258
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.8999999749186353,
+      "wasmHeapBytes": 189005824
+    },
+    {
+      "scenario": "gather",
+      "windows": [
+        {
+          "intent": "regroup",
+          "elapsedS": 3.2400000000000024,
+          "targetErrorM": 0.07149124880476485,
+          "initialTargetErrorM": 0.3677636261253072,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.30248922044224436,
+            0.3024891043928026,
+            0.30248880749663376,
+            0.3024887081710904
+          ]
+        },
+        {
+          "intent": "disperse",
+          "elapsedS": 8.019999999999918,
+          "targetErrorM": 0.24122310478726897,
+          "initialTargetErrorM": 0.28795496477358906,
+          "reason": "Eight-second control window ended; remaining target error is measured below.",
+          "memberTravelM": [
+            0.512586135795398,
+            0.5040752574948223,
+            0.510999463301147,
+            0.5128433710848311
+          ]
+        },
+        {
+          "intent": "regroup",
+          "elapsedS": 6.359999999999952,
+          "targetErrorM": 0.0717440550442861,
+          "initialTargetErrorM": 0.5696114432088893,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.5125527300690533,
+            0.4982205612789414,
+            0.506447935830215,
+            0.5176293796825329
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.8487143774700324,
+      "wasmHeapBytes": 189005824
+    },
+    {
+      "scenario": "split",
+      "windows": [
+        {
+          "intent": "split",
+          "elapsedS": 4.359999999999995,
+          "targetErrorM": 0.07305612799998203,
+          "initialTargetErrorM": 0.4989307089003049,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.431265913330699,
+            0.427666514584494,
+            0.4285776007267028,
+            0.4313277383302016
+          ]
+        },
+        {
+          "intent": "regroup",
+          "elapsedS": 8.019999999999918,
+          "targetErrorM": 0.12174994033823672,
+          "initialTargetErrorM": 0.44399442804072164,
+          "reason": "Eight-second control window ended; remaining target error is measured below.",
+          "memberTravelM": [
+            0.5217534313805917,
+            0.5149669854848389,
+            0.507409975854486,
+            0.5279919408923845
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.6350070909750672,
+      "wasmHeapBytes": 189005824
+    },
+    {
+      "scenario": "convoy",
+      "windows": [
+        {
+          "intent": "advance",
+          "elapsedS": 1.4800000000000009,
+          "targetErrorM": 0.07281400832932718,
+          "initialTargetErrorM": 0.18,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.107769069179224,
+            0.10776906917843458,
+            0.10776906917801873,
+            0.10776906917953105
+          ]
+        },
+        {
+          "intent": "change_leader",
+          "elapsedS": 0,
+          "targetErrorM": null,
+          "initialTargetErrorM": null,
+          "reason": "Group leader changed to duck1.",
+          "memberTravelM": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "intent": "advance",
+          "elapsedS": 5.0399999999999805,
+          "targetErrorM": 0.07511301773856209,
+          "initialTargetErrorM": 0.18000000000000005,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.1117722806109984,
+            0.111771615945745,
+            0.11229831137500176,
+            0.1152947796939663
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.6040307305759217,
+      "wasmHeapBytes": 189005824
+    },
+    {
+      "scenario": "flock",
+      "windows": [
+        {
+          "intent": "advance",
+          "elapsedS": 2.4000000000000017,
+          "targetErrorM": 0.07197230853219233,
+          "initialTargetErrorM": 0.28,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.21277595861841622,
+            0.21277596093722098,
+            0.21277595305932784,
+            0.21277596035336258
+          ]
+        },
+        {
+          "intent": "advance",
+          "elapsedS": 2.2800000000000016,
+          "targetErrorM": 0.07131087320536063,
+          "initialTargetErrorM": 0.28,
+          "reason": "All assigned positions reached within the arrival tolerance.",
+          "memberTravelM": [
+            0.21485737983886152,
+            0.21483953225071808,
+            0.21620335706885452,
+            0.21576110785681485
+          ]
+        },
+        {
+          "intent": "regroup",
+          "elapsedS": 8.019999999999918,
+          "targetErrorM": 0.13702625998784224,
+          "initialTargetErrorM": 0.2068947949166203,
+          "reason": "Eight-second control window ended; remaining target error is measured below.",
+          "memberTravelM": [
+            0.0002922315411062706,
+            0.3283952852616189,
+            0.08344456407036067,
+            0.15506871208684392
+          ]
+        }
+      ],
+      "falls": 0,
+      "interDuckContacts": 0,
+      "barrierContacts": 0,
+      "minSeparationM": 0.5748635002870135,
+      "wasmHeapBytes": 189005824
+    }
+  ],
+  "policyHashes": {
+    "walk": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "stand": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+    "sitstand": "c6c40e35e726eabd803d633e090d112994f469921152448367953fbaf9799bc8"
+  }
+}

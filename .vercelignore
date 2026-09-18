@@ -1,0 +1,14 @@
+.git/
+.env*
+!.env.example
+output/
+.playwright-cli/
+tests/
+*.tsbuildinfo
+README.md
+
+**/.git/
+**/node_modules/
+vendor/**/dist/
+vendor/**/artifacts/
+public/simulator/

@@ -1,0 +1,837 @@
+{
+  "timestamp": "2026-09-18T18:05:40.093Z",
+  "scope": "Live Jev probes using measured-class fixtures. These combine explicitly listed browser-visible aggregates with native controller status and eligibility. They are not exact browser replay or physical recovery rollouts.",
+  "sourceSha256": {
+    "src/lib/swarm-contract.ts": "76f61c147af51f585a5acc3a0a3f731a7815000096276fa77feeb64781de0274",
+    "src/lib/swarm-jev.ts": "1b1235fa6ecd9cd34cfb7f8bde4fee8eef9e21a769cffd18b276e5db657d3f9a",
+    "src/lib/swarm-controller.ts": "6b55b33b7af235b7303697e3c74fcef7c70579dd573b7e7ba4a17a69cf0a7a26",
+    "vendor/microduck-simulator/app/src/game/swarm-controller.js": "8fccfae12cb463e9e2f1f2085155e0a4803398c3c07e91f9e00b6be7c37906c3"
+  },
+  "cases": [
+    {
+      "id": "flock_stagnant_completed_window",
+      "expected": [
+        "regroup",
+        "disperse"
+      ],
+      "observed": "Browser displayed complete advance window, 0.30 m residual and 0.02 m centroid displacement. Other values and earlier outcomes are representative, not captured telemetry.",
+      "nativeStatus": {
+        "active": true,
+        "runId": "recovery-probe-flock",
+        "scenario": "flock",
+        "leaderId": "duck1",
+        "commandId": "native-probe",
+        "intent": "advance",
+        "phase": "blocked",
+        "availableIntents": [
+          "advance",
+          "regroup",
+          "disperse",
+          "change_leader",
+          "split",
+          "hold"
+        ],
+        "centroid": [
+          -0.30000000000000004,
+          0
+        ],
+        "spreadM": 0.6363961030678927,
+        "minSeparationM": 0.9,
+        "progressM": 0,
+        "targetErrorM": 0.28,
+        "reason": "The control window ended without measurable group progress.",
+        "elapsedS": 8.1,
+        "members": 4
+      },
+      "input": {
+        "state": {
+          "seq": 400,
+          "time": 54.6,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "recovery-probe-flock",
+            "scenario": "flock",
+            "leaderId": "duck1",
+            "commandId": "native-probe",
+            "intent": "advance",
+            "phase": "complete",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              -0.30000000000000004,
+              0
+            ],
+            "spreadM": 0.6363961030678927,
+            "minSeparationM": 0.9,
+            "progressM": 0.02,
+            "targetErrorM": 0.3,
+            "reason": "The control window ended without measurable group progress.",
+            "elapsedS": 8.1,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "advance",
+              "outcome": "complete",
+              "progressM": 0.2,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.07,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "advance",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.3,
+              "minSeparationM": 0.7
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "regroup",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 0.98,
+        "abstained": false,
+        "reason": "Regroup selected. Minimum separation 0.90 m; remaining slot error 0.30 m.",
+        "latencyMs": 537,
+        "alternatives": [
+          {
+            "intent": "regroup",
+            "probability": 0.99
+          },
+          {
+            "intent": "hold",
+            "probability": 0.01
+          },
+          {
+            "intent": "disperse",
+            "probability": 0
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "flock_native_blocked_class",
+      "expected": [
+        "regroup",
+        "disperse",
+        "hold"
+      ],
+      "observed": "Browser displayed blocked advance, 0.28 m residual and 0.52 m minimum separation. Native fixture supplies blocked phase and standing eligibility. Its poses are not the browser poses.",
+      "nativeStatus": {
+        "active": true,
+        "runId": "recovery-probe-flock",
+        "scenario": "flock",
+        "leaderId": "duck1",
+        "commandId": "native-probe",
+        "intent": "advance",
+        "phase": "blocked",
+        "availableIntents": [
+          "advance",
+          "regroup",
+          "disperse",
+          "change_leader",
+          "split",
+          "hold"
+        ],
+        "centroid": [
+          -0.30000000000000004,
+          0
+        ],
+        "spreadM": 0.6363961030678927,
+        "minSeparationM": 0.9,
+        "progressM": 0,
+        "targetErrorM": 0.28,
+        "reason": "The control window ended without measurable group progress.",
+        "elapsedS": 8.1,
+        "members": 4
+      },
+      "input": {
+        "state": {
+          "seq": 400,
+          "time": 54.6,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "recovery-probe-flock",
+            "scenario": "flock",
+            "leaderId": "duck1",
+            "commandId": "native-probe",
+            "intent": "advance",
+            "phase": "blocked",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              -0.30000000000000004,
+              0
+            ],
+            "spreadM": 0.6363961030678927,
+            "minSeparationM": 0.52,
+            "progressM": 0,
+            "targetErrorM": 0.28,
+            "reason": "The control window ended without measurable group progress.",
+            "elapsedS": 8.1,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "advance",
+              "outcome": "blocked",
+              "progressM": 0,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.28,
+              "minSeparationM": 0.52
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "regroup",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 0.98,
+        "abstained": false,
+        "reason": "Regroup selected. Minimum separation 0.52 m; remaining slot error 0.28 m.",
+        "latencyMs": 326,
+        "alternatives": [
+          {
+            "intent": "regroup",
+            "probability": 0.98
+          },
+          {
+            "intent": "disperse",
+            "probability": 0.01
+          },
+          {
+            "intent": "hold",
+            "probability": 0.01
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "flock_after_measured_regroup",
+      "expected": [
+        "advance"
+      ],
+      "observed": "Counterfactual contract fixture: recovery reduces assigned-slot error from 0.60 to 0.10 m. No physical rollout is claimed.",
+      "nativeStatus": {
+        "active": true,
+        "runId": "recovery-probe-flock",
+        "scenario": "flock",
+        "leaderId": "duck1",
+        "commandId": "native-probe",
+        "intent": "advance",
+        "phase": "blocked",
+        "availableIntents": [
+          "advance",
+          "regroup",
+          "disperse",
+          "change_leader",
+          "split",
+          "hold"
+        ],
+        "centroid": [
+          -0.30000000000000004,
+          0
+        ],
+        "spreadM": 0.6363961030678927,
+        "minSeparationM": 0.9,
+        "progressM": 0,
+        "targetErrorM": 0.28,
+        "reason": "The control window ended without measurable group progress.",
+        "elapsedS": 8.1,
+        "members": 4
+      },
+      "input": {
+        "state": {
+          "seq": 400,
+          "time": 54.6,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "recovery-probe-flock",
+            "scenario": "flock",
+            "leaderId": "duck1",
+            "commandId": "native-probe",
+            "intent": "regroup",
+            "phase": "complete",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              -0.30000000000000004,
+              0
+            ],
+            "spreadM": 0.6363961030678927,
+            "minSeparationM": 0.9,
+            "progressM": 0.02,
+            "targetErrorM": 0.1,
+            "reason": "The control window ended without measurable group progress.",
+            "elapsedS": 8.1,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "advance",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.3,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "regroup",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": 0.6,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "advance",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 0.86,
+        "abstained": false,
+        "reason": "Advance formation selected. Minimum separation 0.90 m; remaining slot error 0.10 m.",
+        "latencyMs": 267,
+        "alternatives": [
+          {
+            "intent": "advance",
+            "probability": 0.9
+          },
+          {
+            "intent": "hold",
+            "probability": 0.08
+          },
+          {
+            "intent": "disperse",
+            "probability": 0.02
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "flock_recovery_exhausted",
+      "expected": [
+        "hold"
+      ],
+      "observed": "Counterfactual contract fixture: two measured recoveries each followed by ineffective advance. Bounded recovery must not become unlimited movement.",
+      "nativeStatus": {
+        "active": true,
+        "runId": "recovery-probe-flock",
+        "scenario": "flock",
+        "leaderId": "duck1",
+        "commandId": "native-probe",
+        "intent": "advance",
+        "phase": "blocked",
+        "availableIntents": [
+          "advance",
+          "regroup",
+          "disperse",
+          "change_leader",
+          "split",
+          "hold"
+        ],
+        "centroid": [
+          -0.30000000000000004,
+          0
+        ],
+        "spreadM": 0.6363961030678927,
+        "minSeparationM": 0.9,
+        "progressM": 0,
+        "targetErrorM": 0.28,
+        "reason": "The control window ended without measurable group progress.",
+        "elapsedS": 8.1,
+        "members": 4
+      },
+      "input": {
+        "state": {
+          "seq": 400,
+          "time": 54.6,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "recovery-probe-flock",
+            "scenario": "flock",
+            "leaderId": "duck1",
+            "commandId": "native-probe",
+            "intent": "advance",
+            "phase": "complete",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              -0.30000000000000004,
+              0
+            ],
+            "spreadM": 0.6363961030678927,
+            "minSeparationM": 0.9,
+            "progressM": 0.02,
+            "targetErrorM": 0.3,
+            "reason": "The control window ended without measurable group progress.",
+            "elapsedS": 8.1,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "advance",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.3,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "regroup",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": 0.6,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "advance",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.3,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "disperse",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": 0.4,
+              "targetErrorAfterM": 0.2,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "advance",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.3,
+              "minSeparationM": 0.7
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "hold",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 1,
+        "abstained": false,
+        "reason": "Hold selected. Minimum separation 0.90 m; remaining slot error 0.30 m.",
+        "latencyMs": 361,
+        "alternatives": [
+          {
+            "intent": "hold",
+            "probability": 1
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "split_after_compact_stage_with_holds",
+      "expected": [
+        "split"
+      ],
+      "observed": "Browser displayed completed regroup, 0.10 m residual, 0.66 m minimum separation and 0.50 m RMS spread. Before-error and centroid were not retained; local holds here are representative.",
+      "nativeStatus": {
+        "active": true,
+        "runId": "recovery-probe-split",
+        "scenario": "split",
+        "leaderId": "duck1",
+        "commandId": "native-probe",
+        "intent": "regroup",
+        "phase": "complete",
+        "availableIntents": [
+          "advance",
+          "regroup",
+          "disperse",
+          "change_leader",
+          "split",
+          "hold"
+        ],
+        "centroid": [
+          0,
+          0
+        ],
+        "spreadM": 0.5656854249492381,
+        "minSeparationM": 0.8,
+        "progressM": 0,
+        "targetErrorM": 0.01568542494923804,
+        "reason": "All assigned positions reached within the arrival tolerance.",
+        "elapsedS": 8.1,
+        "members": 4
+      },
+      "input": {
+        "state": {
+          "seq": 400,
+          "time": 54.6,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "recovery-probe-split",
+            "scenario": "split",
+            "leaderId": "duck1",
+            "commandId": "native-probe",
+            "intent": "regroup",
+            "phase": "complete",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              0,
+              0
+            ],
+            "spreadM": 0.5,
+            "minSeparationM": 0.66,
+            "progressM": 0,
+            "targetErrorM": 0.1,
+            "reason": "All assigned positions reached within the arrival tolerance.",
+            "elapsedS": 8.1,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "regroup",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "hold",
+              "outcome": "complete",
+              "progressM": 0,
+              "targetErrorBeforeM": 0.1,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "hold",
+              "outcome": "complete",
+              "progressM": 0,
+              "targetErrorBeforeM": 0.1,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "split",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 0.99,
+        "abstained": false,
+        "reason": "Split formation selected. Minimum separation 0.66 m; remaining slot error 0.10 m.",
+        "latencyMs": 235,
+        "alternatives": [
+          {
+            "intent": "split",
+            "probability": 0.99
+          },
+          {
+            "intent": "hold",
+            "probability": 0.01
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "gather_after_compact_stage_with_holds",
+      "expected": [
+        "disperse"
+      ],
+      "observed": "Counterfactual gather-stage fixture matching completed compact regroup plus local holds. No physical rollout is claimed.",
+      "nativeStatus": {
+        "active": true,
+        "runId": "recovery-probe-gather",
+        "scenario": "gather",
+        "leaderId": "duck1",
+        "commandId": "native-probe",
+        "intent": "regroup",
+        "phase": "blocked",
+        "availableIntents": [
+          "advance",
+          "regroup",
+          "disperse",
+          "change_leader",
+          "split",
+          "hold"
+        ],
+        "centroid": [
+          0,
+          0
+        ],
+        "spreadM": 0.9192388155425119,
+        "minSeparationM": 1.3,
+        "progressM": 0,
+        "targetErrorM": 0.3692388155425118,
+        "reason": "The control window ended without measurable group progress.",
+        "elapsedS": 8.1,
+        "members": 4
+      },
+      "input": {
+        "state": {
+          "seq": 400,
+          "time": 54.6,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "recovery-probe-gather",
+            "scenario": "gather",
+            "leaderId": "duck1",
+            "commandId": "native-probe",
+            "intent": "regroup",
+            "phase": "complete",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              0,
+              0
+            ],
+            "spreadM": 0.9192388155425119,
+            "minSeparationM": 1.3,
+            "progressM": 0,
+            "targetErrorM": 0.1,
+            "reason": "The control window ended without measurable group progress.",
+            "elapsedS": 8.1,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "regroup",
+              "outcome": "complete",
+              "progressM": 0.02,
+              "targetErrorBeforeM": 0.6,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "hold",
+              "outcome": "complete",
+              "progressM": 0,
+              "targetErrorBeforeM": 0.1,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            },
+            {
+              "intent": "hold",
+              "outcome": "complete",
+              "progressM": 0,
+              "targetErrorBeforeM": 0.1,
+              "targetErrorAfterM": 0.1,
+              "minSeparationM": 0.7
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "disperse",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 1,
+        "abstained": false,
+        "reason": "Increase spacing selected. Minimum separation 1.30 m; remaining slot error 0.10 m.",
+        "latencyMs": 296,
+        "alternatives": [
+          {
+            "intent": "disperse",
+            "probability": 1
+          },
+          {
+            "intent": "hold",
+            "probability": 0
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "convoy_after_blocked_advance",
+      "expected": [
+        "regroup",
+        "change_leader",
+        "hold"
+      ],
+      "observed": "Native stationary-pose fixture reaches a blocked advance and retains actual runtime standing availability. No captured browser blocked convoy state is claimed.",
+      "nativeStatus": {
+        "active": true,
+        "runId": "recovery-probe-convoy",
+        "scenario": "convoy",
+        "leaderId": "duck4",
+        "commandId": "native-probe",
+        "intent": "advance",
+        "phase": "blocked",
+        "availableIntents": [
+          "advance",
+          "regroup",
+          "disperse",
+          "change_leader",
+          "split",
+          "hold"
+        ],
+        "centroid": [
+          5.551115123125783e-17,
+          0
+        ],
+        "spreadM": 0.7379024325749306,
+        "minSeparationM": 0.6599999999999999,
+        "progressM": 0,
+        "targetErrorM": 0.18,
+        "reason": "The control window ended without measurable group progress.",
+        "elapsedS": 8.1,
+        "members": 4
+      },
+      "input": {
+        "state": {
+          "seq": 400,
+          "time": 54.6,
+          "ready": true,
+          "paused": false,
+          "swarm": {
+            "active": true,
+            "runId": "recovery-probe-convoy",
+            "scenario": "convoy",
+            "leaderId": "duck4",
+            "commandId": "native-probe",
+            "intent": "advance",
+            "phase": "blocked",
+            "availableIntents": [
+              "advance",
+              "regroup",
+              "disperse",
+              "change_leader",
+              "split",
+              "hold"
+            ],
+            "centroid": [
+              5.551115123125783e-17,
+              0
+            ],
+            "spreadM": 0.7379024325749306,
+            "minSeparationM": 0.6599999999999999,
+            "progressM": 0,
+            "targetErrorM": 0.18,
+            "reason": "The control window ended without measurable group progress.",
+            "elapsedS": 8.1,
+            "members": 4
+          }
+        },
+        "memory": {
+          "recent": [
+            {
+              "intent": "advance",
+              "outcome": "blocked",
+              "progressM": 0,
+              "targetErrorBeforeM": null,
+              "targetErrorAfterM": 0.18,
+              "minSeparationM": 0.7
+            }
+          ]
+        }
+      },
+      "status": 200,
+      "result": {
+        "intent": "hold",
+        "source": "jev",
+        "model": "jev-1.13.0",
+        "confidence": 0.52,
+        "abstained": true,
+        "reason": "Decision score 52% is below threshold. Holding.",
+        "latencyMs": 276,
+        "alternatives": [
+          {
+            "intent": "change_leader",
+            "probability": 0.68
+          },
+          {
+            "intent": "regroup",
+            "probability": 0.29
+          },
+          {
+            "intent": "hold",
+            "probability": 0.03
+          }
+        ]
+      },
+      "pass": true
+    }
+  ]
+}
